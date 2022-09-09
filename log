@@ -2,3 +2,24 @@ Fri 09 Sep 2022 12:22:35 PM UTC:
  tests:  0|6
 total_score: 0/70
 e4a8024
+Fri 09 Sep 2022 12:54:44 PM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:57:6: error: statement with no effect [-Werror=unused-value]
+   57 |   map->buckets
+      |   ~~~^~~~~~~~~
+hashmap.c:57:15: error: expected ‘;’ before ‘return’
+   57 |   map->buckets
+      |               ^
+      |               ;
+   58 | 
+   59 |   return map;
+      |   ~~~~~~       
+hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1996156
