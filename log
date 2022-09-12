@@ -208,3 +208,9 @@ hashmap.c:46:9: error: unused variable ‘porrcentaje’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 37e0271
+Mon 12 Sep 2022 12:59:56 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|3
+total_score: 40/70
+819623b

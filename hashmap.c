@@ -43,7 +43,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   Pair *new = createPair(key, value);
   long i = hash(key, map->capacity);
-  float porrcentaje = map->size/map->capacity;
+  float porcentaje = map->size/map->capacity;
 
   if(porcentaje > 0.7){
     enlarge(map);
