@@ -68,7 +68,7 @@ void enlarge(HashMap * map) {
 
   map->capacity *= 2;
   map->buckets = (Pair **) calloc(map->capacity, sizeof(Pair *));
-  map->sizeof = 0;
+  map->size = 0;
 
   for (i = 0; i < tamano ; i++){
     if (oldBuckets[i] != NULL){
