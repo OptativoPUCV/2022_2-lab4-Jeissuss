@@ -154,3 +154,13 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 c4ad39a
+Mon 12 Sep 2022 12:46:55 AM UTC: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:8: error: expected identifier before ‘sizeof’
+   71 |   map->sizeof = 0;
+      |        ^~~~~~
+Compilation failed
+c48adf9
