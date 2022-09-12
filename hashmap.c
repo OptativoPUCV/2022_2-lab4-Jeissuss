@@ -41,25 +41,26 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
 
-  Pair *newPair = createPair(key, value);
-  size_t i = hash(key, map->capacity);
+  Pair *new = createPair(key, value);
+  long i = hash(key, map->capacity);
+  float porrcentaje = map->size/map->capacity;
 
-  while (1){
-    if (map->buckets[i] == NULL){
-      map->buckets[i] =  newPair;
-      map->size++;
-      map->current = i;
-    }
-    i++;
-
-    if (i == map->capacity) {
-
-      i = 0;
-      
-    }
+  if(porcentaje > 0.7){
+    enlarge(map);
   }
+
+  while (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+
+    i = (i + 1) % map->capacity;
+
+  }  
+  map->buckets[i] =  new;
+  map->size++;
+  map->current = i;
+   
+  
 }
-s
+
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   Pair **oldBuckets = map->buckets;
@@ -82,7 +83,7 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity) {
   HashMap *map = (HashMap *) malloc(sizeof(HashMap));
   
-  map->buckets = (Pair **) malloc(capacity * sizeof(Pair));
+  map->buckets = (Pair **) malloc(capacity * sizeof(Pair *));
   map->capacity = capacity;
   map->size = 0;
   map->current = -1;

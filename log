@@ -192,3 +192,19 @@ hashmap.c:62:2: error: expected ‘;’ before ‘void’
       | ~~~~
 Compilation failed
 923c9bb
+Mon 12 Sep 2022 12:59:28 AM UTC: 
+ hashmap.c | 27 ++++++++++++++-------------
+ 1 file changed, 14 insertions(+), 13 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:6: error: ‘porcentaje’ undeclared (first use in this function); did you mean ‘porrcentaje’?
+   48 |   if(porcentaje > 0.7){
+      |      ^~~~~~~~~~
+      |      porrcentaje
+hashmap.c:48:6: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:46:9: error: unused variable ‘porrcentaje’ [-Werror=unused-variable]
+   46 |   float porrcentaje = map->size/map->capacity;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+37e0271
