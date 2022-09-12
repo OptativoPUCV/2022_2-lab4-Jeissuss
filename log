@@ -164,3 +164,19 @@ hashmap.c:71:8: error: expected identifier before ‘sizeof’
       |        ^~~~~~
 Compilation failed
 c48adf9
+Mon 12 Sep 2022 12:47:34 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:62:2: error: expected ‘;’ before ‘void’
+   62 | s
+      |  ^
+      |  ;
+   63 | void enlarge(HashMap * map) {
+      | ~~~~
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:8: error: expected identifier before ‘sizeof’
+   71 |   map->sizeof = 0;
+      |        ^~~~~~
+Compilation failed
+54f20b0
