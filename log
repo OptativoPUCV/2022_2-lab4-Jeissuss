@@ -226,3 +226,14 @@ Mon 12 Sep 2022 01:11:45 AM UTC:
  tests:  12|1
 total_score: 60/70
 80acab6
+Mon 12 Sep 2022 01:14:34 AM UTC: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:136:8: error: ‘i’ undeclared (first use in this function)
+  136 |   for (i = map->current + 1 ;i < map->capacity; i++){
+      |        ^
+hashmap.c:136:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3288384
